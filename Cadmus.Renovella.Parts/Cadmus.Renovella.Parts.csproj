@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Authors>Daniele Fusi</Authors>
+    <Company>Fusi</Company>
+    <Product>Cadmus</Product>
+    <Description>Cadmus components for the Re.Novella project.</Description>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Version>1.0.4</Version>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <Copyright>by Daniele Fusi</Copyright>
+    <PackageTags>Cadmus;Re.Novella parts</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cadmus.Core" Version="2.3.9" />
+    <PackageReference Include="Cadmus.Parts" Version="2.3.14" />
+    <PackageReference Include="Cadmus.Prosopa.Bricks" Version="1.0.0" />
+    <PackageReference Include="Cadmus.Refs.Bricks" Version="1.0.0" />
+    <PackageReference Include="Fusi.Antiquity" Version="1.2.0" />
+  </ItemGroup>
+</Project>

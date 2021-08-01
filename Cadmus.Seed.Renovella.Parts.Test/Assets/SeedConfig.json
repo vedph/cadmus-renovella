@@ -1,0 +1,27 @@
+﻿{
+  "facets": [
+    {
+      "typeId": "it.vedph.renovella.tale-info",
+      "name": "tale",
+      "description": "Information about a tale or tales collection.",
+      "colorKey": "31AB54",
+      "groupKey": "tale",
+      "sortKey": "A"
+    }
+  ],
+  "seed": {
+    "options": {
+      "seed": 1,
+      "baseTextPartTypeId": "it.vedph.token-text",
+      "users": [ "zeus" ],
+      "partRoles": [],
+      "fragmentRoles": []
+    },
+    "partSeeders": [
+      {
+        "id": "seed.it.vedph.renovella.tale-info"
+      }
+    ],
+    "fragmentSeeders": []
+  }
+}

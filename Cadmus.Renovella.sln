@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Renovella.Parts", "Cadmus.Renovella.Parts\Cadmus.Renovella.Parts.csproj", "{61C40EA7-D43B-4E8E-82C0-713184CC5410}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38553149-1947-45F8-82A4-BA034EF139C1}"
+	ProjectSection(SolutionItems) = preProject
+		Pack.bat = Pack.bat
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Seed.Renovella.Parts", "Cadmus.Seed.Renovella.Parts\Cadmus.Seed.Renovella.Parts.csproj", "{1B28E1A9-C905-4067-9240-DAFD021D485C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Seed.Renovella.Parts.Test", "Cadmus.Seed.Renovella.Parts.Test\Cadmus.Seed.Renovella.Parts.Test.csproj", "{187CB036-47A4-466F-9E0C-7D4861BA0394}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Renovella.Parts.Test", "Cadmus.Renovella.Parts.Test\Cadmus.Renovella.Parts.Test.csproj", "{D5C508AC-BEDB-4412-87E9-8D27A04F0DAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadmus.Renovella.Services", "Cadmus.Renovella.Services\Cadmus.Renovella.Services.csproj", "{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61C40EA7-D43B-4E8E-82C0-713184CC5410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C40EA7-D43B-4E8E-82C0-713184CC5410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C40EA7-D43B-4E8E-82C0-713184CC5410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C40EA7-D43B-4E8E-82C0-713184CC5410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B28E1A9-C905-4067-9240-DAFD021D485C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B28E1A9-C905-4067-9240-DAFD021D485C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B28E1A9-C905-4067-9240-DAFD021D485C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B28E1A9-C905-4067-9240-DAFD021D485C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{187CB036-47A4-466F-9E0C-7D4861BA0394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187CB036-47A4-466F-9E0C-7D4861BA0394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187CB036-47A4-466F-9E0C-7D4861BA0394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187CB036-47A4-466F-9E0C-7D4861BA0394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5C508AC-BEDB-4412-87E9-8D27A04F0DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5C508AC-BEDB-4412-87E9-8D27A04F0DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5C508AC-BEDB-4412-87E9-8D27A04F0DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5C508AC-BEDB-4412-87E9-8D27A04F0DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E16601B-C349-4BB4-BB59-E2110FF5E6D8}
+	EndGlobalSection
+EndGlobal
