@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Fusi.Antiquity.Chronology;
 using Cadmus.Prosopa.Bricks;
+using Cadmus.Refs.Bricks;
 
 namespace Cadmus.Renovella.Parts.Test
 {
@@ -58,12 +59,12 @@ namespace Cadmus.Renovella.Parts.Test
         {
             return new CitedPerson
             {
-                Name = new PersonName
+                Name = new ProperName
                 {
                     Language = "en",
-                    Parts = new List<PersonNamePart>
+                    Pieces = new List<ProperNamePiece>
                     {
-                        new PersonNamePart{ Type = "name", Value = name}
+                        new ProperNamePiece{ Type = "name", Value = name}
                     }
                 }
             };

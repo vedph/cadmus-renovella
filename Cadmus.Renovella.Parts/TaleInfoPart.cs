@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using Cadmus.Core;
-using Cadmus.Prosopa.Bricks;
 using Fusi.Antiquity.Chronology;
 using Fusi.Tools.Config;
 

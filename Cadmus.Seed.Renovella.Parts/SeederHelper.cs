@@ -1,10 +1,7 @@
 ﻿using Bogus;
-using Cadmus.Bricks;
-using Cadmus.Parts;
-using Cadmus.Prosopa.Bricks;
+using Cadmus.Refs.Bricks;
 using Cadmus.Renovella.Parts;
 using System.Collections.Generic;
-using DocReference = Cadmus.Bricks.DocReference;
 
 namespace Cadmus.Seed.Renovella.Parts
 {
@@ -27,10 +24,8 @@ namespace Cadmus.Seed.Renovella.Parts
             {
                 refs.Add(new Faker<DocReference>()
                     .RuleFor(r => r.Tag, f => f.PickRandom(null, "tag"))
-                    .RuleFor(r => r.Author, f => f.Lorem.Word())
-                    .RuleFor(r => r.Work, f => f.Lorem.Word())
-                    .RuleFor(r => r.Location,
-                        f => $"{f.Random.Number(1, 24)}.{f.Random.Number(1, 1000)}")
+                    .RuleFor(r => r.Citation,
+                        f => f.Person.LastName + " " + f.Date.Past(10))
                     .RuleFor(r => r.Note, f => f.Lorem.Sentence())
                     .Generate());
             }
@@ -60,17 +55,17 @@ namespace Cadmus.Seed.Renovella.Parts
             return new Faker<CitedPerson>()
                 .RuleFor(t => t.Ids, GetDecoratedIds(1, 2))
                 .RuleFor(t => t.Sources, GetDocReferences(1, 3))
-                .RuleFor(t => t.Name, new Faker<PersonName>()
+                .RuleFor(t => t.Name, new Faker<ProperName>()
                     .RuleFor(pn => pn.Language, "lat")
-                    .RuleFor(pn => pn.Parts, f =>
-                        new List<PersonNamePart>(new[]
+                    .RuleFor(pn => pn.Pieces, f =>
+                        new List<ProperNamePiece>(new[]
                         {
-                            new PersonNamePart
+                            new ProperNamePiece
                             {
                                 Type = "first",
                                 Value = f.Lorem.Word(),
                             },
-                            new PersonNamePart
+                            new ProperNamePiece
                             {
                                 Type = "last",
                                 Value = f.Lorem.Word(),
