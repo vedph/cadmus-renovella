@@ -93,3 +93,7 @@ Data about the tale's story.
     - rename: `author` and `dedicatee` have: `name.pieces` instead of `name.parts`.
 	- remodel: `ids.sources` have new DocReference instead of `tag`, `author`, `work`, `location`. We can merge the last 3 fields into `citation` following some convention.
 	- remodel: `sources` as above.
+
+## History
+
+- 2021-10-25: updated packages.
