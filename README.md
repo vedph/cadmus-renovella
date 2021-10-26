@@ -86,14 +86,11 @@ Data about the tale's story.
   - `place` (`string`)
   - `location` (`string`): location inside place (e.g. "Chiesa di S.Anna")
 
-  ## History
-
-  - 2021-10-16: refactored dependencies so that `DocReference` and `ProperName` (formerly `PersonName`) are from bricks; also, the sub-model cited person is no more from Itinera, but defined inside this project. This implies these changes in the database parts of type `TaleInfoPart`:
-  
-    - rename: `author` and `dedicatee` have: `name.pieces` instead of `name.parts`.
-	- remodel: `ids.sources` have new DocReference instead of `tag`, `author`, `work`, `location`. We can merge the last 3 fields into `citation` following some convention.
-	- remodel: `sources` as above.
-
 ## History
 
 - 2021-10-25: updated packages.
+- 2021-10-16: refactored dependencies so that `DocReference` and `ProperName` (formerly `PersonName`) are from bricks; also, the sub-model cited person is no more from Itinera, but defined inside this project. This implies these changes in the database parts of type `TaleInfoPart`:
+  
+  - rename: `author` and `dedicatee` have: `name.pieces` instead of `name.parts`.
+	- remodel: `ids.sources` have new DocReference instead of `tag`, `author`, `work`, `location`. We can merge the last 3 fields into `citation` following some convention.
+	- remodel: `sources` as above.
