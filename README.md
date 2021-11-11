@@ -88,6 +88,7 @@ Data about the tale's story.
 
 ## History
 
+- 2021-11-11: upgraded to NET 6.
 - 2021-10-25: updated packages.
 - 2021-10-16: refactored dependencies so that `DocReference` and `ProperName` (formerly `PersonName`) are from bricks; also, the sub-model cited person is no more from Itinera, but defined inside this project. This implies these changes in the database parts of type `TaleInfoPart`:
   
