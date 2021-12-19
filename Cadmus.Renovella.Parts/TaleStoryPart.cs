@@ -35,6 +35,11 @@ namespace Cadmus.Renovella.Parts
         public List<StoryCharacter> Characters { get; set; }
 
         /// <summary>
+        /// Gets or sets the optional generic age indication.
+        /// </summary>
+        public string Age { get; set; }
+
+        /// <summary>
         /// Gets or sets the date when the story is set in.
         /// </summary>
         public HistoricalDate Date { get; set; }
@@ -75,6 +80,8 @@ namespace Cadmus.Renovella.Parts
                     Characters.Select(c => c.Role).Distinct());
             }
 
+            if (!string.IsNullOrEmpty(Age)) builder.AddValue("age", Age);
+
             if (Date != null)
                 builder.AddValue("date-value", Date.GetSortValue());
 
@@ -109,6 +116,9 @@ namespace Cadmus.Renovella.Parts
                     "character-role",
                     "Each unique character role in the story.",
                     "MF"),
+                new DataPinDefinition(DataPinValueType.String,
+                    "age",
+                    "The story's age."),
                 new DataPinDefinition(DataPinValueType.Decimal,
                     "date-value",
                     "The story's date value."),

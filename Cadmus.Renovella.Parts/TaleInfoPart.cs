@@ -67,6 +67,11 @@ namespace Cadmus.Renovella.Parts
         public List<string> Genres { get; set; }
 
         /// <summary>
+        /// Gets or sets the structure.
+        /// </summary>
+        public string Structure { get; set; }
+
+        /// <summary>
         /// Gets or sets the rubric.
         /// </summary>
         public string Rubric { get; set; }
@@ -101,7 +106,7 @@ namespace Cadmus.Renovella.Parts
         /// can optionally be passed to this method for those parts requiring
         /// to access further data.</param>
         /// <returns>The pins.</returns>
-        public override IEnumerable<DataPin> GetDataPins(IItem item)
+        public override IEnumerable<DataPin> GetDataPins(IItem item = null)
         {
             DataPinBuilder builder = new DataPinBuilder(
                 new StandardDataPinTextFilter());
@@ -122,9 +127,13 @@ namespace Cadmus.Renovella.Parts
                 builder.AddValue("language", Language);
             if (Genres?.Count > 0)
                 builder.AddValues("genre", Genres);
+            if (!string.IsNullOrEmpty(Structure))
+                builder.AddValue("structure", Structure);
             if (Dedicatee?.Name != null)
+            {
                 builder.AddValue("dedicatee", Dedicatee.Name.GetFullName(),
                     filter: true);
+            }
             if (!string.IsNullOrEmpty(Narrator))
                 builder.AddValue("narrator", Narrator, filter: true);
 
@@ -167,6 +176,9 @@ namespace Cadmus.Renovella.Parts
                     "genre",
                     "The tale's genre.",
                     "M"),
+                 new DataPinDefinition(DataPinValueType.String,
+                    "structure",
+                    "The tale's structure."),
                  new DataPinDefinition(DataPinValueType.String,
                     "dedicatee",
                     "The tale's dedicatee full name.",
