@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Renovella.Parts", "Cadmus.Renovella.Parts\Cadmus.Renovella.Parts.csproj", "{61C40EA7-D43B-4E8E-82C0-713184CC5410}"
 EndProject
@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Seed.Renovella.Parts
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Renovella.Parts.Test", "Cadmus.Renovella.Parts.Test\Cadmus.Renovella.Parts.Test.csproj", "{D5C508AC-BEDB-4412-87E9-8D27A04F0DAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadmus.Renovella.Services", "Cadmus.Renovella.Services\Cadmus.Renovella.Services.csproj", "{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Renovella.Services", "Cadmus.Renovella.Services\Cadmus.Renovella.Services.csproj", "{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadmus.Cli.Plugin.Renovella", "Cadmus.Cli.Plugin.Renovella\Cadmus.Cli.Plugin.Renovella.csproj", "{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
