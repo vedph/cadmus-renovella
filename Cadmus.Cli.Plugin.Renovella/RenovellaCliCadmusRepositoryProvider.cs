@@ -2,8 +2,8 @@
 using Cadmus.Core;
 using Cadmus.Core.Config;
 using Cadmus.Core.Storage;
+using Cadmus.General.Parts;
 using Cadmus.Mongo;
-using Cadmus.Parts.General;
 using Cadmus.Renovella.Parts;
 using Fusi.Tools.Config;
 using System.Reflection;
@@ -35,7 +35,7 @@ namespace Cadmus.Cli.Plugin.Renovella
             TagAttributeToTypeMap _map = new();
             _map.Add(new[]
             {
-                // Cadmus.Parts
+                // Cadmus.General.Parts
                 typeof(NotePart).GetTypeInfo().Assembly,
                 // Cadmus.Renovella.Parts
                 typeof(TaleInfoPart).GetTypeInfo().Assembly,

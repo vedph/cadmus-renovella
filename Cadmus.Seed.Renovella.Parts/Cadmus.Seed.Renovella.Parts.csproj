@@ -9,7 +9,7 @@
     <Product>Cadmus</Product>
     <Description>Cadmus seeder components for the Re.Novella project.</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>1.2.1</Version>
+    <Version>1.2.3</Version>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <Copyright>by Daniele Fusi</Copyright>
     <PackageTags>Cadmus;Re.Novella part seeders</PackageTags>

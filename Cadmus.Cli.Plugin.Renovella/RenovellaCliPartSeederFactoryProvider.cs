@@ -1,13 +1,13 @@
 ﻿using Cadmus.Cli.Core;
 using Cadmus.Core.Config;
 using Cadmus.Seed;
-using Cadmus.Seed.Parts.General;
 using Fusi.Microsoft.Extensions.Configuration.InMemoryJson;
 using Fusi.Tools.Config;
 using Microsoft.Extensions.Configuration;
 using SimpleInjector;
 using System.Reflection;
 using Cadmus.Seed.Renovella.Parts;
+using Cadmus.Seed.General.Parts;
 
 namespace Cadmus.Cli.Plugin.Renovella
 {
@@ -28,7 +28,7 @@ namespace Cadmus.Cli.Plugin.Renovella
             // build the tags to types map for parts/fragments
             Assembly[] seedAssemblies = new[]
             {
-                // Cadmus.Seed.Parts
+                // Cadmus.Seed.General.Parts
                 typeof(NotePartSeeder).Assembly,
                 // Cadmus.Seed.Renovella.Parts
                 typeof(TaleInfoPartSeeder).GetTypeInfo().Assembly,

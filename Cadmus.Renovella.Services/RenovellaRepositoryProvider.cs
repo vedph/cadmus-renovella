@@ -3,8 +3,8 @@ using System.Reflection;
 using Cadmus.Core;
 using Cadmus.Core.Config;
 using Cadmus.Core.Storage;
+using Cadmus.General.Parts;
 using Cadmus.Mongo;
-using Cadmus.Parts.General;
 using Cadmus.Renovella.Parts;
 using Microsoft.Extensions.Configuration;
 using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
@@ -35,7 +35,7 @@ namespace Cadmus.Renovella.Services
             _map = new TagAttributeToTypeMap();
             _map.Add(new[]
             {
-                // Cadmus.Parts
+                // Cadmus.General.Parts
                 typeof(NotePart).GetTypeInfo().Assembly,
                 // Cadmus.Renovella.Parts
                 typeof(TaleInfoPart).GetTypeInfo().Assembly,

@@ -5,7 +5,6 @@ using Cadmus.Seed.Renovella.Parts;
 using System.Collections.Generic;
 using System.Linq;
 using Fusi.Antiquity.Chronology;
-using Cadmus.Prosopa.Bricks;
 using Cadmus.Refs.Bricks;
 
 namespace Cadmus.Renovella.Parts.Test
