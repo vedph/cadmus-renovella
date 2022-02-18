@@ -14,6 +14,7 @@ Cross-parts submodels:
 - `TaleInfoPart`\*
 - `TaleStoryPart`\*
 - `BibliographyPart`\*
+- `PoemsInfoPart`
 - `CategoriesPart`
 - `IndexKeywordsPart`
 - `ExternalIdsPart`
@@ -24,6 +25,7 @@ Cross-parts submodels:
 - `TaleInfoPart`\*
 - `TaleStoryPart`\*
 - `BibliographyPart`\*
+- `PoemsInfoPart`
 - `DocReferencesPart`\* for mss, if just quoting the signature
 - `CategoriesPart`
 - `IndexKeywordsPart`
@@ -64,6 +66,7 @@ Essential information about a tale or a tales collection.
 - `date`\* (`HistoricalDate`)
 - `language`\* (`string`: thesaurus `tale-languages`)
 - `genres`\* (`string[]`: thesaurus `tale-genres`)
+- `structure` (string)
 - `dedicatee` (`CitedPerson`)
 - `rubric` (`string`)
 - `incipit` (`string`)
@@ -71,6 +74,8 @@ Essential information about a tale or a tales collection.
 - `narrator` (`string`)
 
 ### TaleStoryPart
+
+ID: `it.vedph.renovella.tale-story`
 
 Data about the tale's story.
 
@@ -88,8 +93,18 @@ Data about the tale's story.
   - `place` (`string`)
   - `location` (`string`): location inside place (e.g. "Chiesa di S.Anna")
 
+### PoeticTextsPart
+
+ID: `it.vedph.renovella.poetic-texts`.
+
+- texts (`PoeticText[]`):
+  - `metre`\* (string) T:poetic-text-metres
+  - `incipit`\* (string)
+  - `note` (string)
+
 ## History
 
+- 2022-02-18: completed PoeticTextsPart.
 - 2022-02-08: upgraded packages.
 - 2021-11-11: upgraded to NET 6.
 - 2021-10-25: updated packages.
