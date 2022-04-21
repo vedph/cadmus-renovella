@@ -191,3 +191,9 @@ db.parts.find({
 ```
 
 As we just have 6 cases and it's not clear how the team prefers to handle this, we have better leave this to manual editing.
+
+## History
+
+### 1.2.8
+
+- 2022-04-21: updated packages.

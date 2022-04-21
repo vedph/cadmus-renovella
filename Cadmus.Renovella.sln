@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38553149-1947-45F8-82A4-BA034EF139C1}"
 	ProjectSection(SolutionItems) = preProject
 		Pack.bat = Pack.bat
+		Push.bat = Push.bat
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -19,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Renovella.Parts.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Renovella.Services", "Cadmus.Renovella.Services\Cadmus.Renovella.Services.csproj", "{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadmus.Cli.Plugin.Renovella", "Cadmus.Cli.Plugin.Renovella\Cadmus.Cli.Plugin.Renovella.csproj", "{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Cli.Plugin.Renovella", "Cadmus.Cli.Plugin.Renovella\Cadmus.Cli.Plugin.Renovella.csproj", "{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
