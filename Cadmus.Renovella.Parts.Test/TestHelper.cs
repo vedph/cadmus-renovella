@@ -8,10 +8,10 @@ using Xunit;
 
 namespace Cadmus.Renovella.Parts.Test
 {
-    internal sealed class TestHelper
+    internal static class TestHelper
     {
         private static readonly JsonSerializerOptions _options =
-            new JsonSerializerOptions
+            new()
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase
             };
@@ -30,7 +30,7 @@ namespace Cadmus.Renovella.Parts.Test
             if (json == null)
                 throw new ArgumentNullException(nameof(json));
 
-            return JsonSerializer.Deserialize<T>(json, _options);
+            return JsonSerializer.Deserialize<T>(json, _options)!;
         }
 
         public static string SerializeFragment(ITextLayerFragment fr)
@@ -47,7 +47,7 @@ namespace Cadmus.Renovella.Parts.Test
             if (json == null)
                 throw new ArgumentNullException(nameof(json));
 
-            return JsonSerializer.Deserialize<T>(json, _options);
+            return JsonSerializer.Deserialize<T>(json, _options)!;
         }
 
         public static void AssertPinIds(IPart part, DataPin pin)

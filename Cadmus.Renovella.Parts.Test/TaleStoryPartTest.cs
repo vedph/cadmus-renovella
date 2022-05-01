@@ -12,7 +12,7 @@ namespace Cadmus.Renovella.Parts.Test
     {
         private static TaleStoryPart GetPart()
         {
-            TaleStoryPartSeeder seeder = new TaleStoryPartSeeder();
+            TaleStoryPartSeeder seeder = new();
             IItem item = new Item
             {
                 FacetId = "default",
@@ -83,37 +83,37 @@ namespace Cadmus.Renovella.Parts.Test
             List<DataPin> pins = part.GetDataPins(null).ToList();
             Assert.Equal(7, pins.Count);
 
-            DataPin pin = pins.Find(p => p.Name == "character-count"
+            DataPin? pin = pins.Find(p => p.Name == "character-count"
                 && p.Value == "2");
-            Assert.NotNull(pin);
-            TestHelper.AssertPinIds(part, pin);
+            Assert.NotNull(pin!);
+            TestHelper.AssertPinIds(part, pin!);
 
             pin = pins.Find(p => p.Name == "character-name"
                 && p.Value == "niccolo");
-            Assert.NotNull(pin);
-            TestHelper.AssertPinIds(part, pin);
+            Assert.NotNull(pin!);
+            TestHelper.AssertPinIds(part, pin!);
 
             pin = pins.Find(p => p.Name == "character-name"
                 && p.Value == "aldo");
-            Assert.NotNull(pin);
-            TestHelper.AssertPinIds(part, pin);
+            Assert.NotNull(pin!);
+            TestHelper.AssertPinIds(part, pin!);
 
             pin = pins.Find(p => p.Name == "character-role"
                 && p.Value == "peasant");
-            Assert.NotNull(pin);
-            TestHelper.AssertPinIds(part, pin);
+            Assert.NotNull(pin!);
+            TestHelper.AssertPinIds(part, pin!);
 
             pin = pins.Find(p => p.Name == "date-value" && p.Value == "1100");
-            Assert.NotNull(pin);
-            TestHelper.AssertPinIds(part, pin);
+            Assert.NotNull(pin!);
+            TestHelper.AssertPinIds(part, pin!);
 
             pin = pins.Find(p => p.Name == "place-type" && p.Value == "city");
-            Assert.NotNull(pin);
-            TestHelper.AssertPinIds(part, pin);
+            Assert.NotNull(pin!);
+            TestHelper.AssertPinIds(part, pin!);
 
             pin = pins.Find(p => p.Name == "place-name" && p.Value == "naples");
-            Assert.NotNull(pin);
-            TestHelper.AssertPinIds(part, pin);
+            Assert.NotNull(pin!);
+            TestHelper.AssertPinIds(part, pin!);
         }
     }
 }

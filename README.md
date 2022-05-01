@@ -194,6 +194,10 @@ As we just have 6 cases and it's not clear how the team prefers to handle this, 
 
 ## History
 
+### 2.0.0
+
+- 2022-05-01: upgraded to NET6.0.
+
 ### 1.2.8
 
 - 2022-04-21: updated packages.
