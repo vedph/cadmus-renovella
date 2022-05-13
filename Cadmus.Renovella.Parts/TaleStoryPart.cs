@@ -67,7 +67,7 @@ namespace Cadmus.Renovella.Parts
         /// <returns>The pins.</returns>
         public override IEnumerable<DataPin> GetDataPins(IItem item)
         {
-            DataPinBuilder builder = new DataPinBuilder(
+            DataPinBuilder builder = new(
                 new StandardDataPinTextFilter());
 
             builder.Set("character", Characters?.Count ?? 0, false);
@@ -144,7 +144,7 @@ namespace Cadmus.Renovella.Parts
         /// </returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
 
             sb.Append("[TaleStory] ");
 

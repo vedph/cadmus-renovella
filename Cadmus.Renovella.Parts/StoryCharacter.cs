@@ -34,7 +34,7 @@ namespace Cadmus.Renovella.Parts
         /// </summary>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             if (IsGroup) sb.Append('*');
             sb.Append(Name);
             if (Sex != '\0') sb.Append(" (").Append(Sex).Append(')');

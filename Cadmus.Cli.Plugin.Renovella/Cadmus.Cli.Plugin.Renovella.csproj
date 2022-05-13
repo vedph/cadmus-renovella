@@ -11,12 +11,12 @@
 	<Product>Cadmus</Product>
 	<Description>Cadmus components for the Re.Novella project.</Description>
 	<NeutralLanguage>en-US</NeutralLanguage>
-	<Version>2.0.0</Version>
+	<Version>2.0.1</Version>
 	<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 	<Copyright>by Daniele Fusi</Copyright>
 	<PackageTags>Cadmus;Re.Novella CLI plugin</PackageTags>
-	<FileVersion>2.0.0</FileVersion>
-	<AssemblyVersion>2.0.0</AssemblyVersion>
+	<FileVersion>2.0.1</FileVersion>
+	<AssemblyVersion>2.0.1</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -30,7 +30,7 @@ namespace Cadmus.Renovella.Parts
         /// </returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             if (Name != null) sb.Append(Name.ToString());
             if (Ids?.Count > 0)
                 sb.Append(" = ").Append(string.Join("; ", Ids));

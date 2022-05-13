@@ -10,11 +10,11 @@
     <Description>Cadmus Renovella project services.</Description>
     <Copyright>By Daniele Fusi 2021</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageTags>Cadmus;Re.Novella</PackageTags>
-    <FileVersion>2.0.0</FileVersion>
-    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <FileVersion>2.0.1</FileVersion>
+    <AssemblyVersion>2.0.1</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -35,7 +35,7 @@ namespace Cadmus.Renovella.Parts
         /// these keys: <c>incipit</c>, <c>metre</c>.</returns>
         public override IEnumerable<DataPin> GetDataPins(IItem item = null)
         {
-            DataPinBuilder builder = new DataPinBuilder(DataPinHelper.Filter);
+            DataPinBuilder builder = new(DataPinHelper.Filter);
 
             builder.Set("tot", Texts?.Count ?? 0, false);
 
@@ -81,7 +81,7 @@ namespace Cadmus.Renovella.Parts
         /// </returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
 
             sb.Append("[PoeticTexts]");
 

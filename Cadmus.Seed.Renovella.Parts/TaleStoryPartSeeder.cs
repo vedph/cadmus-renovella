@@ -18,7 +18,7 @@ namespace Cadmus.Seed.Renovella.Parts
     {
         private List<StoryCharacter> GetCharacters(int min, int max)
         {
-            List<StoryCharacter> characters = new List<StoryCharacter>();
+            List<StoryCharacter> characters = new();
             for (int n = 1; n <= Randomizer.Seed.Next(min, max + 1); n++)
             {
                 bool isGroup = Randomizer.Seed.Next(0, 10) == 0;
@@ -43,7 +43,7 @@ namespace Cadmus.Seed.Renovella.Parts
 
         private List<StoryPlace> GetPlaces(int min, int max)
         {
-            List<StoryPlace> places = new List<StoryPlace>();
+            List<StoryPlace> places = new();
             for (int n = 1; n <= Randomizer.Seed.Next(min, max + 1); n++)
             {
                 places.Add(new Faker<StoryPlace>()

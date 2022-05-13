@@ -18,7 +18,7 @@ namespace Cadmus.Seed.Renovella.Parts
         /// <returns>References.</returns>
         public static List<DocReference> GetDocReferences(int min, int max)
         {
-            List<DocReference> refs = new List<DocReference>();
+            List<DocReference> refs = new();
 
             for (int n = 1; n <= Randomizer.Seed.Next(min, max + 1); n++)
             {
@@ -35,7 +35,7 @@ namespace Cadmus.Seed.Renovella.Parts
 
         public static List<DecoratedId> GetDecoratedIds(int min, int max)
         {
-            List<DecoratedId> ids = new List<DecoratedId>();
+            List<DecoratedId> ids = new();
 
             for (int n = 1; n <= Randomizer.Seed.Next(min, max + 1); n++)
             {

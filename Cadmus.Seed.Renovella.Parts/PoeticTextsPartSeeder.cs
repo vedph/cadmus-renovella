@@ -18,7 +18,7 @@ namespace Cadmus.Seed.Renovella.Parts
         private static IList<PoeticText> GetTexts(int count)
         {
             var metres = new string[] { "sonetto", "ballata" };
-            List<PoeticText> texts = new List<PoeticText>(count);
+            List<PoeticText> texts = new(count);
 
             for (int n = 1; n <= count; n++)
             {

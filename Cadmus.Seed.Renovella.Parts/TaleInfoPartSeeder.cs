@@ -25,8 +25,8 @@ namespace Cadmus.Seed.Renovella.Parts
             _ordinals = new Dictionary<string, short>();
         }
 
-        private static List<string> GetRandomGenre() => new List<string>
-            {
+        private static List<string> GetRandomGenre() => new()
+        {
                 new[] { "comic", "tragic", "moral" }[Randomizer.Seed.Next(0, 3)]
             };
 

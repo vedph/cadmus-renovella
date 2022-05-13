@@ -34,6 +34,18 @@ Cross-parts submodels:
 
 ## Parts
 
+### AvailableWitnessesPart
+
+ID: `it.vedph.renovella.available-witnesses`
+
+Information about witnesses (essentially manuscripts) available for the specified item (tale or tales collection).
+
+- witnesses (`AvailableWitness`):
+  - `id`\* (`string`)
+  - `isPartial` (`boolean`)
+  - `note` (`string`)
+  - `externalIds` (`string[]`)
+
 ### TaleInfoPart
 
 ID: `it.vedph.renovella.tale-info`
@@ -193,6 +205,10 @@ db.parts.find({
 As we just have 6 cases and it's not clear how the team prefers to handle this, we have better leave this to manual editing.
 
 ## History
+
+### 2.0.1
+
+- 2022-05-12: added `AvailableWitnessesPart`.
 
 ### 2.0.0
 

@@ -1,29 +1,29 @@
-﻿using Cadmus.Core;
-using Fusi.Tools.Config;
+﻿using System.Linq;
 using System.Collections.Generic;
 using System.Text;
+using Cadmus.Core;
+using Fusi.Tools.Config;
 
 namespace Cadmus.Renovella.Parts
 {
     /// <summary>
-    /// Poems info part.
-    /// <para>Tag: <c>it.vedph.renovella.poems-info</c>.</para>
+    /// Available witnesses part.
+    /// Tag: <c>it.vedph.renovella.available-witnesses</c>.
     /// </summary>
-    /// <seealso cref="PartBase" />
-    [Tag("it.vedph.renovella.poems-info")]
-    public sealed class PoemsInfoPart : PartBase
+    [Tag("it.vedph.renovella.available-witnesses")]
+    public sealed class AvailableWitnessesPart : PartBase
     {
         /// <summary>
-        /// Gets or sets the entries.
+        /// Gets or sets the witnesses.
         /// </summary>
-        public List<PoemInfo> Poems { get; set; }
+        public List<AvailableWitness> Witnesses { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PoemsInfoPart"/> class.
+        /// Initializes a new instance of the <see cref="AvailableWitnessesPart"/> class.
         /// </summary>
-        public PoemsInfoPart()
+        public AvailableWitnessesPart()
         {
-            Poems = new List<PoemInfo>();
+            Witnesses = new List<AvailableWitness>();
         }
 
         /// <summary>
@@ -33,18 +33,15 @@ namespace Cadmus.Renovella.Parts
         /// can optionally be passed to this method for those parts requiring
         /// to access further data.</param>
         /// <returns>The pins: <c>tot-count</c> and a collection of pins with
-        /// these keys: ....</returns>
+        /// these keys: <c>witness</c>.</returns>
         public override IEnumerable<DataPin> GetDataPins(IItem item = null)
         {
             DataPinBuilder builder = new();
 
-            builder.Set("tot", Poems?.Count ?? 0, false);
+            builder.Set("tot", Witnesses?.Count ?? 0, false);
 
-            if (Poems?.Count > 0)
-            {
-                foreach (PoemInfo poem in Poems)
-                    builder.AddValue("metre", poem.Metre);
-            }
+            if (Witnesses?.Count > 0)
+                builder.AddValues("witness", from w in Witnesses select w.Id);
 
             return builder.Build(this);
         }
@@ -59,11 +56,11 @@ namespace Cadmus.Renovella.Parts
             {
                 new DataPinDefinition(DataPinValueType.Integer,
                    "tot-count",
-                   "The total count of poems."),
+                   "The total count of entries."),
                 new DataPinDefinition(DataPinValueType.String,
-                   "metre",
-                   "The poems metres.",
-                   "M"),
+                   "witness",
+                   "The list of witnesses IDs.",
+                   "M")
             });
         }
 
@@ -77,20 +74,20 @@ namespace Cadmus.Renovella.Parts
         {
             StringBuilder sb = new();
 
-            sb.Append("[PoemsInfo]");
+            sb.Append("[AvailableWitnesses]");
 
-            if (Poems?.Count > 0)
+            if (Witnesses?.Count > 0)
             {
                 sb.Append(' ');
                 int n = 0;
-                foreach (var entry in Poems)
+                foreach (var entry in Witnesses)
                 {
                     if (++n > 3) break;
                     if (n > 1) sb.Append("; ");
                     sb.Append(entry);
                 }
-                if (Poems.Count > 3)
-                    sb.Append("...(").Append(Poems.Count).Append(')');
+                if (Witnesses.Count > 3)
+                    sb.Append("...(").Append(Witnesses.Count).Append(')');
             }
 
             return sb.ToString();
