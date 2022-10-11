@@ -16,6 +16,7 @@ namespace Cadmus.Cli.Plugin.Renovella
     /// Tag: <c>cli-seeder-factory-provider.renovella</c>.
     /// </summary>
     /// <seealso cref="ICliPartSeederFactoryProvider" />
+    [Obsolete("Replace CLI providers with API providers")]
     [Tag("cli-seeder-factory-provider.renovella")]
     public sealed class RenovellaCliPartSeederFactoryProvider :
         ICliPartSeederFactoryProvider

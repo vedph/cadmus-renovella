@@ -36,11 +36,11 @@ namespace Cadmus.Renovella.Services
                 // Cadmus.Seed.Renovella.Parts
                 typeof(TaleInfoPartSeeder).GetTypeInfo().Assembly,
             };
-            TagAttributeToTypeMap map = new TagAttributeToTypeMap();
+            TagAttributeToTypeMap map = new();
             map.Add(seedAssemblies);
 
             // build the container for seeders
-            Container container = new Container();
+            Container container = new();
             PartSeederFactory.ConfigureServices(
                 container,
                 new StandardPartTypeProvider(map),

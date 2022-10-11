@@ -6,34 +6,34 @@ using Cadmus.Core.Storage;
 using Cadmus.General.Parts;
 using Cadmus.Mongo;
 using Cadmus.Renovella.Parts;
-using Microsoft.Extensions.Configuration;
-using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
+using Fusi.Tools.Config;
 
 namespace Cadmus.Renovella.Services
 {
     /// <summary>
     /// Cadmus Re.Novella repository provider.
+    /// Tag: <c>repository-provider.renovella</c>.
     /// </summary>
     /// <seealso cref="IRepositoryProvider" />
+    [Tag("repository-provider.renovella")]
     public sealed class RenovellaRepositoryProvider : IRepositoryProvider
     {
-        private readonly IConfiguration _configuration;
-        private readonly TagAttributeToTypeMap _map;
         private readonly IPartTypeProvider _partTypeProvider;
+
+        /// <summary>
+        /// The connection string.
+        /// </summary>
+        public string ConnectionString { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="StandardRepositoryProvider"/>
         /// class.
         /// </summary>
-        /// <param name="configuration">The configuration.</param>
         /// <exception cref="ArgumentNullException">configuration</exception>
-        public RenovellaRepositoryProvider(IConfiguration configuration)
+        public RenovellaRepositoryProvider()
         {
-            _configuration = configuration ??
-                throw new ArgumentNullException(nameof(configuration));
-
-            _map = new TagAttributeToTypeMap();
-            _map.Add(new[]
+            TagAttributeToTypeMap map = new();
+            map.Add(new[]
             {
                 // Cadmus.General.Parts
                 typeof(NotePart).GetTypeInfo().Assembly,
@@ -41,7 +41,7 @@ namespace Cadmus.Renovella.Services
                 typeof(TaleInfoPart).GetTypeInfo().Assembly,
             });
 
-            _partTypeProvider = new StandardPartTypeProvider(_map);
+            _partTypeProvider = new StandardPartTypeProvider(map);
         }
 
         /// <summary>
@@ -60,16 +60,14 @@ namespace Cadmus.Renovella.Services
         public ICadmusRepository CreateRepository()
         {
             // create the repository (no need to use container here)
-            MongoCadmusRepository repository =
-                new MongoCadmusRepository(
-                    _partTypeProvider,
+            MongoCadmusRepository repository = new(_partTypeProvider,
                     new StandardItemSortKeyBuilder());
 
             repository.Configure(new MongoCadmusRepositoryOptions
             {
-                ConnectionString = string.Format(
-                    _configuration.GetConnectionString("Default"),
-                    _configuration.GetValue<string>("DatabaseNames:Data"))
+                ConnectionString = ConnectionString ??
+                throw new InvalidOperationException(
+                    "No connection string set for IRepositoryProvider implementation")
             });
 
             return repository;

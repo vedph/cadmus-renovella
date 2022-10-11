@@ -15,6 +15,7 @@ namespace Cadmus.Cli.Plugin.Renovella
     /// Tag: <c>cli-repository-provider.renovella</c>.
     /// </summary>
     /// <seealso cref="ICliCadmusRepositoryProvider" />
+    [Obsolete("Replace CLI providers with API providers")]
     [Tag("cli-repository-provider.renovella")]
     public sealed class RenovellaCliCadmusRepositoryProvider :
         ICliCadmusRepositoryProvider

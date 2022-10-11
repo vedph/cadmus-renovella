@@ -11,18 +11,18 @@
 	<Product>Cadmus</Product>
 	<Description>Cadmus components for the Re.Novella project.</Description>
 	<NeutralLanguage>en-US</NeutralLanguage>
-	<Version>2.0.1</Version>
+	<Version>2.1.0</Version>
 	<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 	<Copyright>by Daniele Fusi</Copyright>
 	<PackageTags>Cadmus;Re.Novella CLI plugin</PackageTags>
-	<FileVersion>2.0.1</FileVersion>
-	<AssemblyVersion>2.0.1</AssemblyVersion>
+	<FileVersion>2.1.0</FileVersion>
+	<AssemblyVersion>2.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cadmus.Cli.Core" Version="3.0.0" />
-    <PackageReference Include="Cadmus.Mongo" Version="3.0.0" />
-    <PackageReference Include="Cadmus.Seed.General.Parts" Version="1.0.4" />
+    <PackageReference Include="Cadmus.Cli.Core" Version="4.1.0" />
+    <PackageReference Include="Cadmus.Mongo" Version="4.1.0" />
+    <PackageReference Include="Cadmus.Seed.General.Parts" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
