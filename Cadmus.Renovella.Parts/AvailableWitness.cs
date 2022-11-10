@@ -10,7 +10,7 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets the witness identifier.
         /// </summary>
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the coverage
@@ -21,7 +21,7 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets a short note about this witness availability.
         /// </summary>
-        public string Note { get; set; }
+        public string? Note { get; set; }
 
         /// <summary>
         /// Gets or sets a list of external IDs for the witness.

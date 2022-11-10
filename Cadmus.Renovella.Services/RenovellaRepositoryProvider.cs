@@ -32,6 +32,7 @@ namespace Cadmus.Renovella.Services
         /// <exception cref="ArgumentNullException">configuration</exception>
         public RenovellaRepositoryProvider()
         {
+            ConnectionString = "";
             TagAttributeToTypeMap map = new();
             map.Add(new[]
             {

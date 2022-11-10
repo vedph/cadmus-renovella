@@ -17,13 +17,13 @@ namespace Cadmus.Renovella.Parts
         /// Gets or sets the human-readable ID of the collection. Empty or null
         /// if this is not a collection.
         /// </summary>
-        public string CollectionId { get; set; }
+        public string? CollectionId { get; set; }
 
         /// <summary>
         /// Gets or sets the container identifier, i.e. the ID of the collection
         /// this tale belongs to.
         /// </summary>
-        public string ContainerId { get; set; }
+        public string? ContainerId { get; set; }
 
         /// <summary>
         /// Gets or sets the ordinal number of this tale in its collection, if
@@ -34,32 +34,32 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets the title.
         /// </summary>
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         /// <summary>
         /// Gets or sets the author.
         /// </summary>
-        public CitedPerson Author { get; set; }
+        public CitedPerson? Author { get; set; }
 
         /// <summary>
         /// Gets or sets the dedicatee.
         /// </summary>
-        public CitedPerson Dedicatee { get; set; }
+        public CitedPerson? Dedicatee { get; set; }
 
         /// <summary>
         /// Gets or sets the place of composition.
         /// </summary>
-        public string Place { get; set; }
+        public string? Place { get; set; }
 
         /// <summary>
         /// Gets or sets the date of composition.
         /// </summary>
-        public HistoricalDate Date { get; set; }
+        public HistoricalDate? Date { get; set; }
 
         /// <summary>
         /// Gets or sets the language of this tale.
         /// </summary>
-        public string Language { get; set; }
+        public string? Language { get; set; }
 
         /// <summary>
         /// Gets or sets the genre(s) this tale belongs to.
@@ -69,27 +69,27 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets the structure.
         /// </summary>
-        public string Structure { get; set; }
+        public string? Structure { get; set; }
 
         /// <summary>
         /// Gets or sets the rubric.
         /// </summary>
-        public string Rubric { get; set; }
+        public string? Rubric { get; set; }
 
         /// <summary>
         /// Gets or sets the incipit.
         /// </summary>
-        public string Incipit { get; set; }
+        public string? Incipit { get; set; }
 
         /// <summary>
         /// Gets or sets the explicit.
         /// </summary>
-        public string Explicit { get; set; }
+        public string? Explicit { get; set; }
 
         /// <summary>
         /// Gets or sets the narrator of this tale.
         /// </summary>
-        public string Narrator { get; set; }
+        public string? Narrator { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TaleInfoPart"/> class.
@@ -106,7 +106,7 @@ namespace Cadmus.Renovella.Parts
         /// can optionally be passed to this method for those parts requiring
         /// to access further data.</param>
         /// <returns>The pins.</returns>
-        public override IEnumerable<DataPin> GetDataPins(IItem item = null)
+        public override IEnumerable<DataPin> GetDataPins(IItem? item = null)
         {
             DataPinBuilder builder = new(
                 new StandardDataPinTextFilter());
@@ -121,7 +121,7 @@ namespace Cadmus.Renovella.Parts
                 builder.AddValue("author", Author.Name.GetFullName(), filter: true);
             if (!string.IsNullOrEmpty(Place))
                 builder.AddValue("place", Place, filter: true);
-            if (Date != null)
+            if (Date is not null)
                 builder.AddValue("date-value", Date.GetSortValue());
             if (!string.IsNullOrEmpty(Language))
                 builder.AddValue("language", Language);

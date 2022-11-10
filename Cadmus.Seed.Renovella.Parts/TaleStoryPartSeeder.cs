@@ -16,7 +16,7 @@ namespace Cadmus.Seed.Renovella.Parts
     [Tag("seed.it.vedph.renovella.tale-story")]
     public sealed class TaleStoryPartSeeder : PartSeederBase
     {
-        private List<StoryCharacter> GetCharacters(int min, int max)
+        private static List<StoryCharacter> GetCharacters(int min, int max)
         {
             List<StoryCharacter> characters = new();
             for (int n = 1; n <= Randomizer.Seed.Next(min, max + 1); n++)
@@ -41,7 +41,7 @@ namespace Cadmus.Seed.Renovella.Parts
             return characters;
         }
 
-        private List<StoryPlace> GetPlaces(int min, int max)
+        private static List<StoryPlace> GetPlaces(int min, int max)
         {
             List<StoryPlace> places = new();
             for (int n = 1; n <= Randomizer.Seed.Next(min, max + 1); n++)
@@ -63,8 +63,8 @@ namespace Cadmus.Seed.Renovella.Parts
         /// for layer parts, which need to seed a set of fragments.</param>
         /// <returns>A new part.</returns>
         /// <exception cref="ArgumentNullException">item or factory</exception>
-        public override IPart GetPart(IItem item, string roleId,
-            PartSeederFactory factory)
+        public override IPart? GetPart(IItem item, string? roleId,
+            PartSeederFactory? factory)
         {
             if (item == null)
                 throw new ArgumentNullException(nameof(item));

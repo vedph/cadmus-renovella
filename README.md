@@ -116,6 +116,10 @@ ID: `it.vedph.renovella.poetic-texts`.
 
 ## History
 
+### 3.0.0
+
+- 2022-11-10: upgraded to NET 7.
+
 ### 2.1.0
 
 - 2022-10-11: updated packages (`IRepositoryProvider`).

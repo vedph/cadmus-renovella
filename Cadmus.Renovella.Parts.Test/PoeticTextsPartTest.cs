@@ -21,7 +21,7 @@ namespace Cadmus.Renovella.Parts.Test
                 Title = "Test Item",
                 SortKey = ""
             };
-            return (PoeticTextsPart)seeder.GetPart(item, null, null);
+            return (PoeticTextsPart)seeder.GetPart(item, null, null)!;
         }
 
         private static PoeticTextsPart GetEmptyPart()

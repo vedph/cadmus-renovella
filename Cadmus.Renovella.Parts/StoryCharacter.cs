@@ -10,7 +10,7 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         /// Gets or sets the sex (M, F, or -).
@@ -20,7 +20,7 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets the role of the character in the story.
         /// </summary>
-        public string Role { get; set; }
+        public string? Role { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this character is rather

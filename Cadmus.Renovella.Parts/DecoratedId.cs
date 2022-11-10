@@ -12,7 +12,7 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets the identifier expressing the identification.
         /// </summary>
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
         /// <summary>
         /// Gets or sets the rank. This is a numeric value used to sort
@@ -25,7 +25,7 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets the tag, used to categorize this ID in any way.
         /// </summary>
-        public string Tag { get; set; }
+        public string? Tag { get; set; }
 
         /// <summary>
         /// Gets or sets the sources.

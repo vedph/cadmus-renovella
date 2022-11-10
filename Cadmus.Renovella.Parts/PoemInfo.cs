@@ -8,17 +8,17 @@
         /// <summary>
         /// Gets or sets the metre.
         /// </summary>
-        public string Metre { get; set; }
+        public string? Metre { get; set; }
 
         /// <summary>
         /// Gets or sets the incipit.
         /// </summary>
-        public string Incipit { get; set; }
+        public string? Incipit { get; set; }
 
         /// <summary>
         /// Gets or sets the note.
         /// </summary>
-        public string Note { get; set; }
+        public string? Note { get; set; }
 
         /// <summary>
         /// Converts to string.

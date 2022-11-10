@@ -17,7 +17,7 @@ namespace Cadmus.Seed.Renovella.Parts
     public sealed class TaleInfoPartSeeder : PartSeederBase
     {
         private int _nextCollId;
-        private Dictionary<string, short> _ordinals;
+        private readonly Dictionary<string, short> _ordinals;
 
         public TaleInfoPartSeeder()
         {
@@ -39,16 +39,15 @@ namespace Cadmus.Seed.Renovella.Parts
         /// for layer parts, which need to seed a set of fragments.</param>
         /// <returns>A new part.</returns>
         /// <exception cref="ArgumentNullException">item or factory</exception>
-        public override IPart GetPart(IItem item, string roleId,
-            PartSeederFactory factory)
+        public override IPart? GetPart(IItem item, string? roleId,
+            PartSeederFactory? factory)
         {
-            if (item == null)
-                throw new ArgumentNullException(nameof(item));
+            if (item == null) throw new ArgumentNullException(nameof(item));
 
             // 1 of 10 is a collection named after c + N
-            string collectionId = null;
+            string? collectionId = null;
             if (Randomizer.Seed.Next(0, 10) == 0) collectionId = "c" + _nextCollId++;
-            string containerId = collectionId != null && _nextCollId > 1
+            string? containerId = collectionId != null && _nextCollId > 1
                     ? null
                     : "c" + Randomizer.Seed.Next(1, _nextCollId);
             if (containerId != null)

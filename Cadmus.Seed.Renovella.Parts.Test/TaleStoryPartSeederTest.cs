@@ -17,14 +17,14 @@ namespace Cadmus.Seed.Renovella.Parts.Test
         {
             _factory = TestHelper.GetFactory();
             _seedOptions = _factory.GetSeedOptions();
-            _item = _factory.GetItemSeeder().GetItem(1, "facet");
+            _item = _factory.GetItemSeeder().GetItem(1, "facet")!;
         }
 
         [Fact]
         public void TypeHasTagAttribute()
         {
             Type t = typeof(TaleStoryPartSeeder);
-            TagAttribute attr = t.GetTypeInfo().GetCustomAttribute<TagAttribute>();
+            TagAttribute? attr = t.GetTypeInfo().GetCustomAttribute<TagAttribute>();
             Assert.NotNull(attr);
             Assert.Equal("seed.it.vedph.renovella.tale-story", attr.Tag);
         }
@@ -35,11 +35,11 @@ namespace Cadmus.Seed.Renovella.Parts.Test
             TaleStoryPartSeeder seeder = new TaleStoryPartSeeder();
             seeder.SetSeedOptions(_seedOptions);
 
-            IPart part = seeder.GetPart(_item, null, _factory);
+            IPart? part = seeder.GetPart(_item, null, _factory);
 
             Assert.NotNull(part);
 
-            TaleStoryPart p = part as TaleStoryPart;
+            TaleStoryPart? p = part as TaleStoryPart;
             Assert.NotNull(p);
 
             TestHelper.AssertPartMetadata(p);

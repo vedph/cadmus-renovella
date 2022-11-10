@@ -25,7 +25,7 @@ namespace Cadmus.Seed.Renovella.Parts.Test
             if (name == null) throw new ArgumentNullException(nameof(name));
 
             return Assembly.GetExecutingAssembly().GetManifestResourceStream(
-                    $"Cadmus.Seed.Renovella.Parts.Test.Assets.{name}");
+                    $"Cadmus.Seed.Renovella.Parts.Test.Assets.{name}")!;
         }
 
         static public string LoadResourceText(string name)
@@ -85,7 +85,7 @@ namespace Cadmus.Seed.Renovella.Parts.Test
             return JsonSerializer.Serialize(part, part.GetType(), _options);
         }
 
-        public static T DeserializePart<T>(string json)
+        public static T? DeserializePart<T>(string json)
             where T : class, IPart, new()
         {
             if (json == null)

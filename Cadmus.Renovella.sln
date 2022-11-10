@@ -20,8 +20,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Renovella.Parts.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Renovella.Services", "Cadmus.Renovella.Services\Cadmus.Renovella.Services.csproj", "{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadmus.Cli.Plugin.Renovella", "Cadmus.Cli.Plugin.Renovella\Cadmus.Cli.Plugin.Renovella.csproj", "{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,10 +46,6 @@ Global
 		{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D0CB712-CE4D-46B6-AD0E-D3465B67A218}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54C7269A-D53E-49F4-A2DD-A5BED185ED7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

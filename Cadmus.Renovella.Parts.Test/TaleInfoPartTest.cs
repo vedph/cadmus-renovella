@@ -23,7 +23,7 @@ namespace Cadmus.Renovella.Parts.Test
                 Title = "Test Item",
                 SortKey = ""
             };
-            return (TaleInfoPart)seeder.GetPart(item, null, null);
+            return (TaleInfoPart)seeder.GetPart(item, null, null)!;
         }
 
         private static TaleInfoPart GetEmptyPart()
@@ -43,15 +43,15 @@ namespace Cadmus.Renovella.Parts.Test
             TaleInfoPart part = GetPart();
 
             string json = TestHelper.SerializePart(part);
-            TaleInfoPart part2 = TestHelper.DeserializePart<TaleInfoPart>(json);
+            TaleInfoPart? part2 = TestHelper.DeserializePart<TaleInfoPart>(json);
 
+            Assert.NotNull(part2);
             Assert.Equal(part.Id, part2.Id);
             Assert.Equal(part.TypeId, part2.TypeId);
             Assert.Equal(part.ItemId, part2.ItemId);
             Assert.Equal(part.RoleId, part2.RoleId);
             Assert.Equal(part.CreatorId, part2.CreatorId);
             Assert.Equal(part.UserId, part2.UserId);
-            // TODO: check parts data here...
         }
 
         private static CitedPerson GetCitedPerson(string name)

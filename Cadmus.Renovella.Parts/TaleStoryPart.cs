@@ -17,17 +17,17 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets the summary.
         /// </summary>
-        public string Summary { get; set; }
+        public string? Summary { get; set; }
 
         /// <summary>
         /// Gets or sets the prologue.
         /// </summary>
-        public string Prologue { get; set; }
+        public string? Prologue { get; set; }
 
         /// <summary>
         /// Gets or sets the epilogue.
         /// </summary>
-        public string Epilogue { get; set; }
+        public string? Epilogue { get; set; }
 
         /// <summary>
         /// Gets or sets the characters.
@@ -37,12 +37,12 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets the optional generic age indication.
         /// </summary>
-        public string Age { get; set; }
+        public string? Age { get; set; }
 
         /// <summary>
         /// Gets or sets the date when the story is set in.
         /// </summary>
-        public HistoricalDate Date { get; set; }
+        public HistoricalDate? Date { get; set; }
 
         /// <summary>
         /// Gets or sets the place(s) where the story is set in.
@@ -65,7 +65,7 @@ namespace Cadmus.Renovella.Parts
         /// can optionally be passed to this method for those parts requiring
         /// to access further data.</param>
         /// <returns>The pins.</returns>
-        public override IEnumerable<DataPin> GetDataPins(IItem item)
+        public override IEnumerable<DataPin> GetDataPins(IItem? item = null)
         {
             DataPinBuilder builder = new(
                 new StandardDataPinTextFilter());
@@ -75,22 +75,22 @@ namespace Cadmus.Renovella.Parts
             if (Characters?.Count > 0)
             {
                 builder.AddValues("character-name",
-                    Characters.Select(c => c.Name).Distinct(), filter: true);
+                    Characters.Select(c => c.Name!).Distinct(), filter: true);
                 builder.AddValues("character-role",
-                    Characters.Select(c => c.Role).Distinct());
+                    Characters.Select(c => c.Role ?? "").Distinct());
             }
 
             if (!string.IsNullOrEmpty(Age)) builder.AddValue("age", Age);
 
-            if (Date != null)
+            if (Date is not null)
                 builder.AddValue("date-value", Date.GetSortValue());
 
             if (Places?.Count > 0)
             {
-                builder.AddValues("place-type", Places.Select(p => p.Type)
+                builder.AddValues("place-type", Places.Select(p => p.Type!)
                     .Distinct());
                 builder.AddValues("place-name",
-                    Places.Select(p => p.Name).Distinct(),
+                    Places.Select(p => p.Name!).Distinct(),
                     filter: true);
             }
 
@@ -148,14 +148,13 @@ namespace Cadmus.Renovella.Parts
 
             sb.Append("[TaleStory] ");
 
-            if (Date != null) sb.Append(Date);
-            if (Places?.Count > 0)
-                sb.Append(string.Join("; ", Places));
+            if (Date is not null) sb.Append(Date);
+            if (Places?.Count > 0) sb.AppendJoin("; ", Places);
 
             if (Characters?.Count > 0)
             {
-                sb.Append(string.Join("; ", from c in Characters
-                                            select c.ToString()));
+                sb.AppendJoin("; ", from c in Characters
+                                    select c.ToString());
             }
 
             return sb.ToString();

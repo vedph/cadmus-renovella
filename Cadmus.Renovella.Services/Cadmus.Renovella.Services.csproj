@@ -1,27 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+	<Nullable>enable</Nullable>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Authors>Daniele Fusi</Authors>
     <Company>Fusi</Company>
     <Product>Cadmus</Product>
     <Description>Cadmus Renovella project services.</Description>
     <Copyright>By Daniele Fusi 2021</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>2.1.0</Version>
+    <Version>3.0.0</Version>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageTags>Cadmus;Re.Novella</PackageTags>
-    <FileVersion>2.1.0</FileVersion>
-    <AssemblyVersion>2.1.0</AssemblyVersion>
+    <FileVersion>3.0.0</FileVersion>
+    <AssemblyVersion>3.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cadmus.Core" Version="4.1.0" />
-    <PackageReference Include="Cadmus.Index.Sql" Version="4.1.0" />
-    <PackageReference Include="Cadmus.Mongo" Version="4.1.0" />
-    <PackageReference Include="Cadmus.Seed.General.Parts" Version="2.1.0" />
+    <PackageReference Include="Cadmus.Core" Version="5.0.0" />
+    <PackageReference Include="Cadmus.Index.Sql" Version="5.0.0" />
+    <PackageReference Include="Cadmus.Mongo" Version="5.0.0" />
+    <PackageReference Include="Cadmus.Seed.General.Parts" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>

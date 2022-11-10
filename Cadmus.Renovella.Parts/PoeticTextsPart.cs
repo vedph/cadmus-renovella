@@ -33,7 +33,7 @@ namespace Cadmus.Renovella.Parts
         /// to access further data.</param>
         /// <returns>The pins: <c>tot-count</c> and a collection of pins with
         /// these keys: <c>incipit</c>, <c>metre</c>.</returns>
-        public override IEnumerable<DataPin> GetDataPins(IItem item = null)
+        public override IEnumerable<DataPin> GetDataPins(IItem? item = null)
         {
             DataPinBuilder builder = new(DataPinHelper.Filter);
 
@@ -111,17 +111,17 @@ namespace Cadmus.Renovella.Parts
         /// <summary>
         /// Gets or sets the incipit.
         /// </summary>
-        public string Incipit { get; set; }
+        public string? Incipit { get; set; }
 
         /// <summary>
         /// Gets or sets the metre.
         /// </summary>
-        public string Metre { get; set; }
+        public string? Metre { get; set; }
 
         /// <summary>
         /// Gets or sets an optional short note.
         /// </summary>
-        public string Note { get; set; }
+        public string? Note { get; set; }
 
         /// <summary>
         /// Converts to string.
@@ -129,7 +129,7 @@ namespace Cadmus.Renovella.Parts
         /// <returns>String.</returns>
         public override string ToString()
         {
-            return Incipit;
+            return Incipit ?? base.ToString()!;
         }
     }
 }

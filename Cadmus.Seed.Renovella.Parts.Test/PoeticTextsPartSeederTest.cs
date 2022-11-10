@@ -21,7 +21,7 @@ namespace Cadmus.Seed.Renovella.Parts.Test
                 Title = "Test Item",
                 SortKey = ""
             };
-            return (PoeticTextsPart)seeder.GetPart(item, null, null);
+            return (PoeticTextsPart)seeder.GetPart(item, null, null)!;
         }
 
         private static PoeticTextsPart GetEmptyPart()
@@ -41,9 +41,10 @@ namespace Cadmus.Seed.Renovella.Parts.Test
             PoeticTextsPart part = GetPart();
 
             string json = TestHelper.SerializePart(part);
-            PoeticTextsPart part2 =
+            PoeticTextsPart? part2 =
                 TestHelper.DeserializePart<PoeticTextsPart>(json);
 
+            Assert.NotNull(part2);
             Assert.Equal(part.Id, part2.Id);
             Assert.Equal(part.TypeId, part2.TypeId);
             Assert.Equal(part.ItemId, part2.ItemId);
@@ -87,7 +88,7 @@ namespace Cadmus.Seed.Renovella.Parts.Test
 
             Assert.Equal(7, pins.Count);
 
-            DataPin pin = pins.Find(p => p.Name == "tot-count");
+            DataPin? pin = pins.Find(p => p.Name == "tot-count");
             Assert.NotNull(pin);
             TestHelper.AssertPinIds(part, pin);
             Assert.Equal("3", pin.Value);

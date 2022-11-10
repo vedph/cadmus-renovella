@@ -8,18 +8,18 @@
         /// <summary>
         /// Gets or sets the place's type (e.g. city, country, etc.).
         /// </summary>
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         /// <summary>
         /// Gets or sets the place's name.
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         /// Gets or sets an optional location inside the place (e.g. "Chiesa
         /// di S.Anna").
         /// </summary>
-        public string Location { get; set; }
+        public string? Location { get; set; }
 
         public override string ToString()
         {

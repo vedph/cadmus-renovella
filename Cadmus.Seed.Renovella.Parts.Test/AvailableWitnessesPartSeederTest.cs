@@ -16,8 +16,8 @@ namespace Cadmus.Seed.Renovella.Parts.Test
         [Fact]
         public void TypeHasTagAttribute()
         {
-            Type t = typeof(AvailableWitnessesPartSeeder);
-            TagAttribute attr = t.GetTypeInfo().GetCustomAttribute<TagAttribute>();
+            Type? t = typeof(AvailableWitnessesPartSeeder);
+            TagAttribute? attr = t.GetTypeInfo().GetCustomAttribute<TagAttribute>();
             Assert.NotNull(attr);
             Assert.Equal("seed.it.vedph.renovella.available-witnesses", attr.Tag);
         }
@@ -28,11 +28,11 @@ namespace Cadmus.Seed.Renovella.Parts.Test
             AvailableWitnessesPartSeeder seeder = new();
             seeder.SetSeedOptions(_seedOptions);
 
-            IPart part = seeder.GetPart(_item, null, _factory);
+            IPart? part = seeder.GetPart(_item, null, _factory);
 
             Assert.NotNull(part);
 
-            AvailableWitnessesPart p = part as AvailableWitnessesPart;
+            AvailableWitnessesPart? p = part as AvailableWitnessesPart;
             Assert.NotNull(p);
 
             TestHelper.AssertPartMetadata(p);

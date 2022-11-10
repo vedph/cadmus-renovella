@@ -14,7 +14,7 @@ namespace Cadmus.Renovella.Parts
         /// but structured into a set of parts like first name, last name,
         /// epithet, etc.
         /// </summary>
-        public ProperName Name { get; set; }
+        public ProperName? Name { get; set; }
 
         /// <summary>
         /// Gets or sets a rank value which can be used to sort several cited
