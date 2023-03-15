@@ -1,17 +1,16 @@
 ﻿using Cadmus.Core;
 
-namespace Cadmus.Renovella.Parts
-{
-    internal static class DataPinHelper
-    {
-        private static IDataPinTextFilter? _filter;
+namespace Cadmus.Renovella.Parts;
 
-        public static IDataPinTextFilter Filter
+internal static class DataPinHelper
+{
+    private static IDataPinTextFilter? _filter;
+
+    public static IDataPinTextFilter Filter
+    {
+        get
         {
-            get
-            {
-                return _filter ??= new StandardDataPinTextFilter();
-            }
+            return _filter ??= new StandardDataPinTextFilter();
         }
     }
 }
