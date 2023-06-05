@@ -116,6 +116,10 @@ ID: `it.vedph.renovella.poetic-texts`.
 
 ## History
 
+### 4.0.1
+
+- 2023-05-19: updated packages.
+
 ### 4.0.0
 
 - 2023-03-15: migrated to [new backend configuration](https://myrmex.github.io/overview/cadmus/dev/history/b-config).
