@@ -127,8 +127,6 @@ public sealed class TaleInfoPart : PartBase
             builder.AddValue("language", Language);
         if (Genres?.Count > 0)
             builder.AddValues("genre", Genres);
-        if (!string.IsNullOrEmpty(Structure))
-            builder.AddValue("structure", Structure);
         if (Dedicatee?.Name != null)
         {
             builder.AddValue("dedicatee", Dedicatee.Name.GetFullName(),
@@ -176,9 +174,6 @@ public sealed class TaleInfoPart : PartBase
                 "genre",
                 "The tale's genre.",
                 "M"),
-             new DataPinDefinition(DataPinValueType.String,
-                "structure",
-                "The tale's structure."),
              new DataPinDefinition(DataPinValueType.String,
                 "dedicatee",
                 "The tale's dedicatee full name.",

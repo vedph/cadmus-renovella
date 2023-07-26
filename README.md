@@ -116,6 +116,12 @@ ID: `it.vedph.renovella.poetic-texts`.
 
 ## History
 
+### 5.0.1
+
+- 2023-07-26:
+  - updated packages.
+  - removed `structure` pin from `TaleInfoPart` as it contains a summary rather than a short definition.
+
 ### 5.0.0
 
 - 2023-06-23: updated packages.
