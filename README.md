@@ -116,6 +116,9 @@ ID: `it.vedph.renovella.poetic-texts`.
 
 ## History
 
+### 5.0.2
+
+- 2023-09-29: updated packages.
 - 2023-08-30: updated test packages.
 
 ### 5.0.1
