@@ -4,33 +4,52 @@
 
 Cross-parts submodels:
 
-- `CitedPerson`
-- `HistoricalDate`: referenced from Cadmus.Parts.
+- `CitedPerson`:
+  - `ids` (`DecoratedId[]`):
+    - `id`
+    - `rank`
+    - `tag`
+    - `sources` (`DocReference[]`):
+      - `type`
+      - `tag`
+      - `citation`
+      - `note`
+  - `sources` (`DocReference[]`)
+  - `name` (`ProperName`):
+    - `language`
+    - `tag`
+    - `pieces` (`ProperNamePiece[]`):
+      - `type`
+      - `value`
+  - `rank`
+- `HistoricalDate`: referenced from `Cadmus.Parts`.
 
 ## Items
 
 ### TaleCollection Item
 
-- `TaleInfoPart`\*
-- `TaleStoryPart`\*
-- `BibliographyPart`\*
-- `PoemsInfoPart`
-- `CategoriesPart`
-- `IndexKeywordsPart`
-- `ExternalIdsPart`
-- `NotePart`
+- `TaleInfoPart`\* (`it.vedph.renovella.tale-info`)
+- `TaleStoryPart`\* (`it.vedph.renovella.tale-story`)
+- `AvailableWitnessesPart` (`it.vedph.renovella.available-witnesses`)
+- `BibliographyPart`\* (`it.vedph.bibliography`)
+- `PoeticTextsPart` (`it.vedph.renovella.poetic-texts`)
+- `CategoriesPart` (`it.vedph.categories`)
+- `IndexKeywordsPart` (`it.vedph.index-keywords`)
+- `ExternalIdsPart` (`it.vedph.external-ids`)
+- `NotePart` (`it.vedph.note"`)
 
 ### Tale Item
 
-- `TaleInfoPart`\*
-- `TaleStoryPart`\*
-- `BibliographyPart`\*
-- `PoemsInfoPart`
-- `DocReferencesPart`\* for mss, if just quoting the signature
-- `CategoriesPart`
-- `IndexKeywordsPart`
-- `ExternalIdsPart`
-- `NotePart`
+- `TaleInfoPart`\* (`it.vedph.renovella.tale-info`)
+- `TaleStoryPart`\* (`it.vedph.renovella.tale-story`)
+- `AvailableWitnessesPart` (`it.vedph.renovella.available-witnesses`)
+- `BibliographyPart`\* (`it.vedph.bibliography`)
+- `PoeticTextsPart` (`it.vedph.renovella.poetic-texts`)
+- `CategoriesPart` (`it.vedph.categories`)
+- `IndexKeywordsPart` (`it.vedph.index-keywords`)
+- `ExternalIdsPart` (`it.vedph.external-ids`)
+- `NotePart` (`it.vedph.note"`)
+- `DocReferencesPart`\* for mss, just quoting the signature (`it.vedph.doc-references`)
 
 ## Parts
 
@@ -40,7 +59,7 @@ ID: `it.vedph.renovella.available-witnesses`
 
 Information about witnesses (essentially manuscripts) available for the specified item (tale or tales collection).
 
-- witnesses (`AvailableWitness`):
+- `witnesses` (`AvailableWitness`):
   - `id`\* (`string`)
   - `isPartial` (`boolean`)
   - `note` (`string`)
@@ -74,12 +93,12 @@ Essential information about a tale or a tales collection.
     - `tag` (`string`)
     - `citation` (`string`)
     - `note` (`string`)
+- `dedicatee` (`CitedPerson`)
 - `place`\* (`string`)
 - `date`\* (`HistoricalDate`)
-- `language`\* (`string`: thesaurus `tale-languages`)
+- `language` (`string`: thesaurus `tale-languages`)
 - `genres`\* (`string[]`: thesaurus `tale-genres`)
-- `structure` (string)
-- `dedicatee` (`CitedPerson`)
+- `structure` (`string`)
 - `rubric` (`string`)
 - `incipit` (`string`)
 - `explicit` (`string`)
@@ -94,11 +113,12 @@ Data about the tale's story.
 - `summary`\* (`string`)
 - `prologue` (`string`)
 - `epilogue` (`string`)
-- `characters`\* (`TaleCharacter[]`)
+- `characters`\* (`StoryCharacter[]`)
   - `name` (`string`)
   - `sex` (`string`; `M` or `F` or `-` when not applicable)
   - `role`\* (`string`: thesaurus `story-roles`)
   - `isGroup` (`boolean`): true if this is a collective designation for a group (e.g. "facchini")
+- `age` (`string`)
 - `date`\* (`HistoricalDate`)
 - `places`\* (`StoryPlace`):
   - `type`\* (`string`, thesaurus `story-place-types`: e.g. city, country, etc)
@@ -110,8 +130,8 @@ Data about the tale's story.
 ID: `it.vedph.renovella.poetic-texts`.
 
 - texts (`PoeticText[]`):
-  - `metre`\* (string) T:poetic-text-metres
   - `incipit`\* (string)
+  - `metre`\* (string) T:poetic-text-metres
   - `note` (string)
 
 ## History
