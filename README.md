@@ -136,6 +136,8 @@ ID: `it.vedph.renovella.poetic-texts`.
 
 ## History
 
+- 2024-04-16: updated test packages.
+
 ### 6.0.0
 
 - 2024-04-08: upgraded to .NET 8.
