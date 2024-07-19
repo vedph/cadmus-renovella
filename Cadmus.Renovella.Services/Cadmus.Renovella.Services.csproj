@@ -11,17 +11,17 @@
     <Description>Cadmus Renovella project services.</Description>
     <Copyright>By Daniele Fusi 2021</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>6.0.2</Version>
+    <Version>6.0.3</Version>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageTags>Cadmus;Re.Novella</PackageTags>
-    <FileVersion>6.0.2</FileVersion>
-    <AssemblyVersion>6.0.2</AssemblyVersion>
+    <FileVersion>6.0.3</FileVersion>
+    <AssemblyVersion>6.0.3</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Cadmus.Core" Version="7.0.3" />
     <PackageReference Include="Cadmus.Mongo" Version="7.0.3" />
-    <PackageReference Include="Cadmus.Seed.General.Parts" Version="6.1.0" />
+    <PackageReference Include="Cadmus.Seed.General.Parts" Version="6.1.2" />
   </ItemGroup>
 
   <ItemGroup>
