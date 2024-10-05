@@ -10,12 +10,12 @@
     <Product>Cadmus</Product>
     <Description>Cadmus seeder components for the Re.Novella project.</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>6.0.3</Version>
+    <Version>6.0.4</Version>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <Copyright>by Daniele Fusi</Copyright>
     <PackageTags>Cadmus;Re.Novella part seeders</PackageTags>
-    <FileVersion>6.0.3</FileVersion>
-    <AssemblyVersion>6.0.3</AssemblyVersion>
+    <FileVersion>6.0.4</FileVersion>
+    <AssemblyVersion>6.0.4</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bogus" Version="35.5.1" />
-    <PackageReference Include="Cadmus.Seed" Version="7.0.3" />
+    <PackageReference Include="Bogus" Version="35.6.1" />
+    <PackageReference Include="Cadmus.Seed" Version="7.0.4" />
     <PackageReference Include="Fusi.Microsoft.Extensions.Configuration.InMemoryJson" Version="3.0.1" />
   </ItemGroup>
 
