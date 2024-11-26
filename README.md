@@ -1,4 +1,4 @@
-# Cadmus Re.Novella
+﻿# Cadmus Re.Novella
 
 ## Submodels
 
@@ -135,6 +135,10 @@ ID: `it.vedph.renovella.poetic-texts`.
   - `note` (string)
 
 ## History
+
+### 7.0.0
+
+- 2024-11-26: ⚠️ upgraded to .NET 9.
 
 ### 6.0.4
 
